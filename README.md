@@ -1,6 +1,6 @@
 # react-native-starter
 
-React native starter template to get you up and running quickly.
+React native startup template to get you up and running quickly.
 
 > ❗If you are a beginner, please refer to the official React Native [setup guide.](https://reactnative.dev/docs/environment-setup)
 
