@@ -1,4 +1,4 @@
-# react-native-startup
+# react-native-starter
 
 React native starter template to get you up and running quickly.
 
