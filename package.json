@@ -1,0 +1,76 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "cd android && ./gradlew clean && cd .. && npx react-native run-android --variant stageDebug --appIdSuffix stage.debug",
+    "android-stage": "cd android && ./gradlew clean && cd .. && npx react-native run-android --variant stageRelease --appIdSuffix stage",
+    "android-prod": "cd android && ./gradlew clean && cd .. && npx react-native run-android --variant prodRelease",
+    "ios": "npx react-native run-ios --scheme Debug --configuration Debug",
+    "ios-stage": "npx react-native run-ios --scheme Stage --configuration Stage",
+    "ios-prod": "npx react-native run-ios --scheme Release --configuration release",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "sb": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
+    "postinstall": "react-native-schemes-manager all"
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.9.0",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.2.7",
+    "@react-navigation/drawer": "^5.5.0",
+    "@react-navigation/native": "^5.1.6",
+    "@react-navigation/stack": "^5.2.13",
+    "@reduxjs/toolkit": "^1.3.5",
+    "axios": "^0.19.2",
+    "prop-types": "^15.7.2",
+    "react": "16.11.0",
+    "react-native": "0.62.2",
+    "react-native-config": "^1.0.0",
+    "react-native-gesture-handler": "^1.6.1",
+    "react-native-reanimated": "^1.8.0",
+    "react-native-safe-area-context": "^0.7.3",
+    "react-native-screens": "^2.7.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/runtime": "^7.6.2",
+    "@react-native-community/eslint-config": "^0.0.5",
+    "@storybook/react-native": "^5.3.18",
+    "@storybook/react-native-server": "^5.3.18",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.1.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "2.5.0",
+    "eslint-plugin-react-native": "^3.8.1",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "react-native-schemes-manager": "^2.0.0",
+    "react-test-renderer": "16.11.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "xcodeSchemes": {
+    "Debug": [
+      "Debug"
+    ],
+    "Stage": [
+      "Stage"
+    ],
+    "Release": [
+      "Release"
+    ],
+    "projectDirectory": "ios",
+    "settings": {}
+  }
+}
