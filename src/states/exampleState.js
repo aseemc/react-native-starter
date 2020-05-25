@@ -1,10 +1,9 @@
 /* eslint-disable no-param-reassign */
 import axios from 'axios';
 import { useSelector } from 'react-redux';
-
-// Slice
 import { createSlice } from '@reduxjs/toolkit';
 
+// Slice
 const countInitialState = {
   count: 0,
 };
