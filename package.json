@@ -6,7 +6,7 @@
     "android": "cd android && ./gradlew clean && cd .. && npx react-native run-android --variant stageDebug --appIdSuffix stage.debug",
     "android-stage": "cd android && ./gradlew clean && cd .. && npx react-native run-android --variant stageRelease --appIdSuffix stage",
     "android-prod": "cd android && ./gradlew clean && cd .. && npx react-native run-android --variant prodRelease",
-    "ios": "npx react-native run-ios --scheme Debug --configuration Debug",
+    "ios": "npx react-native run-ios --scheme app --configuration Debug",
     "ios-stage": "npx react-native run-ios --scheme Stage --configuration Stage",
     "ios-prod": "npx react-native run-ios --scheme Release --configuration release",
     "start": "react-native start",
