@@ -4,7 +4,7 @@ React native startup template to get you up and running quickly.
 
 > ❗If you are a beginner, please refer to the official React Native [setup guide.](https://reactnative.dev/docs/environment-setup)
 
-![iOS](/src/assets/readme/ios.gif) ![Android](/src/assets/readme/android.gif)
+![iOS](/src/assets/images/readme/ios.gif) ![Android](/src/assets/images/readme/android.gif)
 
 ## Features ✨
 
@@ -46,3 +46,4 @@ This project is inspired by this [template](https://github.com/moove-it/react-na
 ## References 📚
 
 - Adding [multiple iOS Schemes](https://medium.com/@guerrix/multiple-schemes-and-configurations-in-a-react-native-ios-app-fb1812b940c8) in react native.
+- [Structuring react native](https://cheesecakelabs.com/blog/efficient-way-structure-react-native-projects/) projects

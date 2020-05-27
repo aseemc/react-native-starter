@@ -12,7 +12,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { store, persistor } from './src/states/store';
 
-import Sample from './src/Sample';
+import Sample from './src';
 
 const App = () => (
   <Provider store={store}>
