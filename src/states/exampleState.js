@@ -54,14 +54,13 @@ export const fetchRemoteUsers = () => async dispatch => {
 
   try {
     const response = await axios.get(
-      'https://jsonplaceholder.typicode.com/users',
+      'https://jsonplaceholder.typicode.com/users'
     );
     dispatch(actions.fetchUsersSuccess(response.data));
   } catch (e) {
     dispatch(actions.fetchUserFailed(e.message));
   }
 };
-
 
 // Default state export
 const useExampleState = () => {
