@@ -16,12 +16,12 @@ const Test = () => {
       <View style={{ height: 20 }} />
       <Text>{state.count}</Text>
       <View style={{ height: 20 }} />
-      <Button title="Increment" onPress={() => dispatch(increment())} />
+      <Button title='Increment' onPress={() => dispatch(increment())} />
       <View style={{ height: 10 }} />
-      <Button title="Decrement" onPress={() => dispatch(decrement())} />
+      <Button title='Decrement' onPress={() => dispatch(decrement())} />
       <View style={{ height: 10 }} />
       <Button
-        title="Fetch Remote Users"
+        title='Fetch Remote Users'
         onPress={() => dispatch(fetchRemoteUsers())}
       />
       {state.isFetchingUsers && <Text>Fetching users...</Text>}
