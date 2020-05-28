@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, Button } from 'react-native';
 import { useDispatch } from 'react-redux';
 import Config from 'react-native-config';
 
+import { HelloWorld } from '_atoms';
 import useExampleState from './states/exampleState';
 
 const Test = () => {
@@ -27,6 +28,7 @@ const Test = () => {
       {state.isFetchingUsers && <Text>Fetching users...</Text>}
       {Object.keys(state.users) &&
         state.users.map(user => <Text key={user.id}>{user.name}</Text>)}
+      <HelloWorld name='Helder Burato Berto' />
     </View>
   );
 };
