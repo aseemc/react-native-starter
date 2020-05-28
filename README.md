@@ -4,23 +4,23 @@ React native startup template to get you up and running quickly.
 
 > ❗If you are a beginner, please refer to the official React Native [setup guide.](https://reactnative.dev/docs/environment-setup)
 
-![iOS](/src/assets/readme/ios.gif) ![Android](/src/assets/readme/android.gif)
+![iOS](/src/assets/images/readme/ios.gif) ![Android](/src/assets/images/readme/android.gif)
 
 ## Features ✨
 
-- Redux setup with _redux-logger_ and _redux-persist_
+- Redux setup with *redux-logger* and *redux-persist*
 - Environment config setup
 - Debug, Stage and Release variants for both iOS and Android
-- Lint
+- Eslint & Prettier setup (*If you use VSCode, install Eslint and Prettier extentions*)
 
 ## Usage ✍🏻
 
-- Click on ![Use this template](/src/assets/readme/use-this-template.png) to have your own repo created from this template.
+- Click on ![Use this template](/src/assets/images/readme/use-this-template.png) to have your own repo created from this template.
 - Clone the repo on your local machine
 - Run
   - `yarn`
   - `cd iOS && pod install`
-  - Add environment files: _.env_, _.env.staging_, _.env.production_
+  - Add environment files: *.env, .env.staging, .env.production*
   - `yarn ios` or `yarn android`
 
 ## Key Dependencies 🤘🏻
@@ -39,10 +39,12 @@ React native startup template to get you up and running quickly.
 
 - [Storybook](https://storybook.js.org/docs/guides/guide-react-native/) v5.3.18
 
-## Motivation
-
-This project is inspired by this [template](https://github.com/moove-it/react-native-template).
-
 ## References 📚
 
 - Adding [multiple iOS Schemes](https://medium.com/@guerrix/multiple-schemes-and-configurations-in-a-react-native-ios-app-fb1812b940c8) in react native.
+- [Structuring react native](https://cheesecakelabs.com/blog/efficient-way-structure-react-native-projects/) projects
+- [Eslint & Prettier](https://medium.com/fullstack-with-react-native-aws-serverless-and/set-up-eslint-and-prettier-5e4131f9296f) setup
+
+## Motivation
+
+This project is inspired by this [template](https://github.com/moove-it/react-native-template).

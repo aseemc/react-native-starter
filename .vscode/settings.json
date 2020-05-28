@@ -1,7 +1,7 @@
 {
-  "prettier.arrowParens": "avoid",
-  "prettier.jsxSingleQuote": true,
-  "prettier.packageManager": "yarn",
-  "prettier.printWidth": 120,
-  "prettier.singleQuote": true
+  "editor.formatOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
