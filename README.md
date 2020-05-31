@@ -35,10 +35,6 @@ React native startup template to get you up and running quickly.
 - [Axios](https://github.com/axios/axios) v0.19.2
 - [PropTypes](https://www.npmjs.com/package/prop-types) v15.7.2
 
-## Key Dev dependencies 👍🏻
-
-- [Storybook](https://storybook.js.org/docs/guides/guide-react-native/) v5.3.18
-
 ## References 📚
 
 - Adding [multiple iOS Schemes](https://medium.com/@guerrix/multiple-schemes-and-configurations-in-a-react-native-ios-app-fb1812b940c8) in react native.
