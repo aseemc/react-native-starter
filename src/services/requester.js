@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { API_BASE_URL } from 'react-native-config';
 
-const axiosBase = ({ timeout = 30000, ...headers }) =>
+const axiosBase = ({ timeout = 30000, headers }) =>
   axios.create({
     baseURL: API_BASE_URL,
     timeout,
