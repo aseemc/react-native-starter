@@ -1,7 +1,8 @@
 /* eslint-disable no-param-reassign */
-import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { createSlice } from '@reduxjs/toolkit';
+
+import { Requester } from '_services';
 
 // Slice
 const countInitialState = {
@@ -53,9 +54,7 @@ export const fetchRemoteUsers = () => async dispatch => {
   dispatch(actions.fetchUsers());
 
   try {
-    const response = await axios.get(
-      'https://jsonplaceholder.typicode.com/users'
-    );
+    const response = await Requester.get('/users');
     dispatch(actions.fetchUsersSuccess(response.data));
   } catch (e) {
     dispatch(actions.fetchUserFailed(e.message));

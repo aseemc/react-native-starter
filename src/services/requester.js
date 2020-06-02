@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { API_BASE_URL } from 'react-native-config';
+import Config from 'react-native-config';
 
 const axiosBase = ({ timeout = 30000, headers }) =>
   axios.create({
-    baseURL: API_BASE_URL,
+    baseURL: Config.API_BASE_URL,
     timeout,
     headers: {
       'Content-Type': 'application/json',
@@ -31,7 +31,7 @@ const executeRequest = ({ method, pathname, data, options = {} }) => {
         resolve(response);
       })
       .catch(error => {
-        console.log('ERROR: ', error.message);
+        console.log('ERROR: ', error);
         reject(error);
       });
   });
