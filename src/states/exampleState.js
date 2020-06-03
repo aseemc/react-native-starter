@@ -49,17 +49,18 @@ export const allState = state => state.example;
 
 // Async Actions
 const { actions } = slice;
+const { fetchUsers, fetchUsersSuccess, fetchUserFailed } = actions;
 
-export const fetchRemoteUsers = () => async dispatch => {
-  dispatch(actions.fetchUsers());
-
-  try {
-    const response = await Requester.get('/users');
-    dispatch(actions.fetchUsersSuccess(response.data));
-  } catch (e) {
-    dispatch(actions.fetchUserFailed(e.message));
-  }
-};
+export const fetchRemoteUsers = () => dispatch =>
+  dispatch({
+    type: 'apiCallBegan',
+    payload: {
+      url: '/users',
+      onStart: fetchUsers.toString(),
+      onSuccess: fetchUsersSuccess.toString(),
+      onFailure: fetchUserFailed.toString(),
+    },
+  });
 
 // Default state export
 const useExampleState = () => {

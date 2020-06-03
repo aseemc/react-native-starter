@@ -12,6 +12,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 
+import { api } from '_middlewares';
 import rootReducer from './rootReducer';
 
 const persistConfig = {
@@ -31,7 +32,7 @@ let middleware = [
 ];
 
 if (process.env.NODE_ENV === 'development') {
-  middleware = [...middleware, logger];
+  middleware = [...middleware, api, logger];
 }
 
 const store = configureStore({
