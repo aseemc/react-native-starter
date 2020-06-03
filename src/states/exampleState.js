@@ -2,8 +2,6 @@
 import { useSelector } from 'react-redux';
 import { createSlice } from '@reduxjs/toolkit';
 
-import { Requester } from '_services';
-
 // Slice
 const countInitialState = {
   count: 0,

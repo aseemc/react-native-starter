@@ -3,6 +3,7 @@ import Config from 'react-native-config';
 
 const api = ({ dispatch }) => next => async action => {
   next(action);
+
   if (action.type !== 'apiCallBegan') return;
 
   const {
