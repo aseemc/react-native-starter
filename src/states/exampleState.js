@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 import { useSelector } from 'react-redux';
 import { createSlice } from '@reduxjs/toolkit';
+import { serializeActions } from './utils';
 
 // Slice
 const countInitialState = {
@@ -46,17 +47,18 @@ export const slice = createSlice({
 export const allState = state => state.example;
 
 // Async Actions
-const { actions } = slice;
-const { fetchUsers, fetchUsersSuccess, fetchUserFailed } = actions;
+const { fetchUsers, fetchUsersSuccess, fetchUserFailed } = serializeActions(
+  slice.actions
+);
 
 export const fetchRemoteUsers = () => dispatch =>
   dispatch({
     type: 'apiCallBegan',
     payload: {
       url: '/users',
-      onStart: fetchUsers.toString(),
-      onSuccess: fetchUsersSuccess.toString(),
-      onFailure: fetchUserFailed.toString(),
+      onStart: fetchUsers,
+      onSuccess: fetchUsersSuccess,
+      onFailure: fetchUserFailed,
     },
   });
 
