@@ -1,10 +1,11 @@
 import axios from 'axios';
 import Config from 'react-native-config';
+import { API_CALL_BEGAN } from '../constants';
 
 const api = ({ dispatch }) => next => async action => {
   next(action);
 
-  if (action.type !== 'apiCallBegan') return;
+  if (action.type !== API_CALL_BEGAN) return;
 
   const {
     url,

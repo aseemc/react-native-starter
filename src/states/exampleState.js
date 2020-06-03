@@ -2,6 +2,7 @@
 import { useSelector } from 'react-redux';
 import { createSlice } from '@reduxjs/toolkit';
 import { serializeActions } from './utils';
+import { API_CALL_BEGAN } from '../constants';
 
 // Slice
 const countInitialState = {
@@ -53,7 +54,7 @@ const { fetchUsers, fetchUsersSuccess, fetchUserFailed } = serializeActions(
 
 export const fetchRemoteUsers = () => dispatch =>
   dispatch({
-    type: 'apiCallBegan',
+    type: API_CALL_BEGAN,
     payload: {
       url: '/users',
       onStart: fetchUsers,
