@@ -13,7 +13,8 @@
     "test": "jest",
     "lint": "eslint .",
     "sb": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
-    "postinstall": "react-native-schemes-manager all"
+    "postinstall": "react-native-schemes-manager all",
+    "debug": "open \"rndebugger://set-debugger-loc?host=localhost&port=8081\""
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.9.0",
