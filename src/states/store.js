@@ -22,7 +22,7 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-let middleware = [
+let middlewares = [
   ...getDefaultMiddleware({
     serializableCheck: {
       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
@@ -31,12 +31,14 @@ let middleware = [
 ];
 
 if (process.env.NODE_ENV === 'development') {
-  middleware = [...middleware, logger];
+  middlewares = [...middlewares, logger];
+  const reduxDebugger = require('redux-middleware-flipper').default;
+  middlewares.push(reduxDebugger());
 }
 
 const store = configureStore({
   reducer: persistedReducer,
-  middleware,
+  middlewares,
 });
 
 const persistor = persistStore(store);
