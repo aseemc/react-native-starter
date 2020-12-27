@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "android": "cd android && ./gradlew clean && cd .. && npx react-native run-android --variant stageDebug --appIdSuffix stage.debug",
@@ -9,7 +9,7 @@
     "ios": "npx react-native run-ios --scheme app --configuration Debug",
     "ios-stage": "npx react-native run-ios --scheme Stage --configuration Stage",
     "ios-prod": "npx react-native run-ios --scheme Release --configuration release",
-    "start": "react-native start",
+    "start": "react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint .",
     "sb": "(adb reverse tcp:7007 tcp:7007 || true) && start-storybook",
