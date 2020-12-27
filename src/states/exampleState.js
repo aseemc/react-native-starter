@@ -1,7 +1,8 @@
 /* eslint-disable no-param-reassign */
-import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { createSlice } from '@reduxjs/toolkit';
+import { serializeActions } from './utils';
+import { API_CALL_BEGAN } from '../constants';
 
 // Slice
 const countInitialState = {
@@ -47,20 +48,20 @@ export const slice = createSlice({
 export const allState = state => state.example;
 
 // Async Actions
-const { actions } = slice;
+const { fetchUsers, fetchUsersSuccess, fetchUserFailed } = serializeActions(
+  slice.actions
+);
 
-export const fetchRemoteUsers = () => async dispatch => {
-  dispatch(actions.fetchUsers());
-
-  try {
-    const response = await axios.get(
-      'https://jsonplaceholder.typicode.com/users'
-    );
-    dispatch(actions.fetchUsersSuccess(response.data));
-  } catch (e) {
-    dispatch(actions.fetchUserFailed(e.message));
-  }
-};
+export const fetchRemoteUsers = () => dispatch =>
+  dispatch({
+    type: API_CALL_BEGAN,
+    payload: {
+      url: '/users',
+      onStart: fetchUsers,
+      onSuccess: fetchUsersSuccess,
+      onFailure: fetchUserFailed,
+    },
+  });
 
 // Default state export
 const useExampleState = () => {

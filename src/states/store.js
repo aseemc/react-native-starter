@@ -12,6 +12,7 @@ import {
   REGISTER,
 } from 'redux-persist';
 
+import { api } from '_middlewares';
 import rootReducer from './rootReducer';
 
 const persistConfig = {
